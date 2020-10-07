@@ -12,6 +12,20 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
+p {
+    font-size: 35px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
 .container::after {
     content: '';
     display: table;
@@ -29,7 +43,7 @@ aside.aside-menu, main {
 }
 
 aside.aside-menu {
-    background-color: black;
+    background-color: #121212;
     width: 70px;
 }
 
@@ -61,7 +75,7 @@ li#search-icon::before {
     font-weight: bold;
     display: block;
     font-size: 20px;
-    color: #fff;
+    color: #e5f6dbc9;
     margin-top: 30px;
     cursor: pointer;
 }
@@ -72,7 +86,7 @@ li#home-icon::before {
     font-weight: bold;
     display: block;
     font-size: 20px;
-    color: #fff;
+    color: #e5f6dbc9;
     cursor: pointer;
 }
 
@@ -82,7 +96,7 @@ li#library-icon::before {
     font-weight: bold;
     display: block;
     font-size: 20px;
-    color: #fff;
+    color: #e5f6dbc9;
     cursor: pointer;
 }
 
@@ -108,7 +122,7 @@ li#library-icon::before {
 }
 
 .app-install-link {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #e5f6dbc9;
     padding-bottom: 20px;
 }
 
@@ -118,7 +132,7 @@ li#library-icon::before {
     font-weight: bold;
     display: block;
     font-size: 30px;
-    color: #fff;
+    color: #e5f6dbc9;
     cursor: pointer;
 }
 
@@ -128,17 +142,56 @@ li#library-icon::before {
     font-weight: bold;
     display: block;
     font-size: 40px;
-    color: #fff;
+    color: #e5f6dbc9;
     cursor: pointer;
     margin-top: 20px;
 }
 
 /* sezione main con titolo e immagini brani / artisti */
+
 main {
-    background-color: orange;
+    background: linear-gradient(45deg, rgba(0,0,0,0.9304096638655462) 41%, rgba(30,215,96,1) 100%);
     width: calc(100% - 70px);
     overflow: auto;
+    text-align: center;
 }
+
+.container-main {
+    width: 85%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.container-main-images  {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-p-title > p {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.img-artists {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+.img-artists > img {
+    width: 100%;
+}
+
+.img-artists > p {
+    font-size: 16px;
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+
+
+
+
 
 /* ________footer________ */
 footer {
@@ -178,7 +231,7 @@ footer {
     .menu-aside >ul > li > a {
         display: inline-block;
         font-size: 18px;
-        color: #fff;
+        color: #e5f6dbc9;
     }
 
     li#search-icon::before {
@@ -207,8 +260,7 @@ footer {
 
     .sottomenu-aside > ul > li > a {
         display: block;
-        text-transform: uppercase;
-        color: #fff;
+        color: #e5f6dbc9;
         font-size: 14px;
         margin: 10px 0;
     }
@@ -222,7 +274,7 @@ footer {
 
     .aside-menu-bottom span {
         display: inline-block;
-        color: #fff;
+        color: #e5f6dbc9;
         margin-left: 20px;
     }
 
@@ -250,12 +302,29 @@ footer {
 
     /* _________inizio main________ */
     main {
-        background-color: orange;
         width: calc(100% - 200px);
     }
 }
 
 @media screen and (min-width: 992px) {
+
+    /* _______inizio menu sezione main_______ */
+
+    .main-desktop-menu {
+        margin-top: 30px;
+    }
+
+    .main-desktop-menu > ul > li {
+        display: inline-block;
+    }
+
+    .main-desktop-menu > ul > li > a {
+        display: inline-block;
+        padding: 5px;
+        margin: 0 20px;
+        color: #e2e5cbe6;
+        font-size: 15px;
+    }
 
 }
 
