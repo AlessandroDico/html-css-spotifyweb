@@ -8,24 +8,89 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container::after {
     content: '';
     display: table;
     clear: both;
 }
 
+
+/* ___fine regole generiche____ */
+
+/* _______barra menu a lato____ */
 aside.aside-menu, main {
     float: left;
     height: calc(100vh - 100px);
 }
 
-/* ___fine regole generiche____ */
-
-/* _______barra menu a lato____ */
 aside.aside-menu {
-    background-color: grey;
+    background-color: black;
     width: 70px;
 }
+
+.logo > img.logo-desktop {
+    display: none;
+}
+
+.logo > img.logo-mobile {
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* ____inizio lista menu aside________ */
+
+.menu-aside >ul > li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu-aside >ul > li > a {
+    display: none;
+}
+
+li#search-icon::before {
+    content: '\f002';
+    font-family: "font awesome 5 free";
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+li#home-icon::before {
+    content: '\f015';
+    font-family: "font awesome 5 free";
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+li#library-icon::before {
+    content: '\f518';
+    font-family: "font awesome 5 free";
+    font-weight: bold;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ____inizio lista sottomenu aside________ */
+
+.sottomenu-aside {
+    display: none;
+}
+
 
 /* sezione main con titolo e immagini brani / artisti */
 main {
@@ -46,10 +111,70 @@ footer {
 /* @@@@@@@@@@________inizio media______ @@@@@@@@@@ */
 
 @media screen and (min-width: 768px) {
+
+    /* ____inizio menu aside________ */
     aside.aside-menu {
         width: 200px;
     }
 
+    .logo img.logo-desktop {
+        display: block;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logo img.logo-mobile {
+        display: none;
+    }
+
+    /* ____inizio lista menu aside________ */
+
+    .menu-aside >ul > li {
+        padding: 10px 0;
+        text-align: left;
+    }
+
+    .menu-aside >ul > li > a {
+        display: inline-block;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    li#search-icon::before {
+        display: inline-block;
+        padding: 0 15px;
+        margin-top: 0;
+    }
+
+    li#home-icon::before {
+        display: inline-block;
+        padding: 0 15px;
+    }
+
+    li#library-icon::before {
+        display: inline-block;
+        padding: 0 15px;
+    }
+
+    /* ____inizio lista sottomenu aside________ */
+
+    .sottomenu-aside {
+        display: block;
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+
+    .sottomenu-aside > ul > li > a {
+        display: block;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+
+
+    /* _________inizio main________ */
     main {
         background-color: orange;
         width: calc(100% - 200px);
