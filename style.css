@@ -25,6 +25,7 @@ a {
 aside.aside-menu, main {
     float: left;
     height: calc(100vh - 100px);
+    position: relative;
 }
 
 aside.aside-menu {
@@ -91,6 +92,46 @@ li#library-icon::before {
     display: none;
 }
 
+/* ____inizio aside menu bottom___ */
+
+.aside-menu-bottom {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 80%;
+    text-align: center;
+}
+
+.aside-menu-bottom span {
+    display: none;
+}
+
+.app-install-link {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+
+.app-install-link::before {
+    content: '\f358';
+    font-family: "font awesome 5 free";
+    font-weight: bold;
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.user-icon::before {
+    content: '\f007';
+    font-family: "font awesome 5 free";
+    font-weight: bold;
+    display: block;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+}
 
 /* sezione main con titolo e immagini brani / artisti */
 main {
@@ -172,6 +213,44 @@ footer {
         margin: 10px 0;
     }
 
+    /* _____inizio menu aside bottom_____ */
+
+    .aside-menu-bottom {
+        text-align: left;
+    }
+
+
+    .aside-menu-bottom span {
+        display: inline-block;
+        color: #fff;
+        margin-left: 20px;
+    }
+
+    .app-install-link > span {
+        font-size: 14px;
+        letter-spacing: 0.9px;
+    }
+
+    .user-icon > span {
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 1.3px;
+    }
+
+    .app-install-link {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 20px;
+    }
+
+    .app-install-link::before {
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .user-icon::before {
+        display: inline-block;
+        font-size: 30px;
+    }
 
 
     /* _________inizio main________ */
