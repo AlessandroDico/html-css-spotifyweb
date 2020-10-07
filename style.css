@@ -156,38 +156,75 @@ main {
     text-align: center;
 }
 
+.toggle-menu {
+    position: relative;
+    height: 60px;
+}
+
+.toggle-menu::after {
+    content: '\f0c9';
+    font-family: "font awesome 5 free";
+    font-weight: bold;
+    display: block;
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+
+.main-desktop-menu {
+    display: none;
+}
+
 .container-main {
-    width: 85%;
+    width: 95%;
     margin: auto;
-    padding: 60px 0;
+    padding: 20px 0;
 }
 
 .container-main-images  {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .main-p-title > p {
-    text-align: left;
-    margin-bottom: 50px;
+    margin: 0 0 50px 0;
+}
+
+.single-image {
+    margin: 20px;
+}
+
+.single-image > p {
+    font-size: 16px;
+    margin: 15px 0;
 }
 
 .img-artists {
-    width: 200px;
-    height: 200px;
-    margin: 20px;
+    width: 105px;
+    height: 105px;
 }
 
 .img-artists > img {
     width: 100%;
 }
 
-.img-artists > p {
-    font-size: 16px;
-    font-weight: 100;
-    margin: 10px 0;
+.img-radius > img {
+    border-radius: 50%;
 }
 
+.four-images::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.four-images > img {
+    float: left;
+    width: 50%;
+}
 
 
 
@@ -304,13 +341,34 @@ footer {
     main {
         width: calc(100% - 200px);
     }
+
+    .img-artists {
+        width: 170px;
+        height: 170px;
+    }
 }
 
 @media screen and (min-width: 992px) {
 
+    /* ____toggle menu sezione main____ */
+
+    .toggle-menu {
+        height: auto;
+    }
+
+    .toggle-menu::after {
+        display: none;
+    }
+
     /* _______inizio menu sezione main_______ */
 
+    .container-main {
+        width: 82%;
+        padding: 60px 0;
+    }
+
     .main-desktop-menu {
+        display: block;
         margin-top: 30px;
     }
 
@@ -321,9 +379,18 @@ footer {
     .main-desktop-menu > ul > li > a {
         display: inline-block;
         padding: 5px;
-        margin: 0 20px;
+        margin: 0 15px;
         color: #e2e5cbe6;
         font-size: 15px;
+    }
+
+    .main-p-title > p {
+        text-align: left;
+        margin: 0 0 50px 20px;
+    }
+
+    .container-main-images  {
+        justify-content: flex-start;
     }
 
 }
