@@ -129,7 +129,7 @@ a#library-icon::before {
 .app-install-link::before {
     content: '\f358';
     font-family: "font awesome 5 free";
-    font-weight: bold;
+    font-weight: 100; /*se metto bold viene 'piena'*/
     display: block;
     font-size: 30px;
     color: #e5f6dbc9;
@@ -227,18 +227,112 @@ main {
     width: 50%;
 }
 
-
-
-
-
 /* ________footer________ */
 footer {
     width: 100%;
     height: 100px;
-    background-color: blue;
+    background-color: #2b352a;
     position: fixed;
     bottom: 0;
 }
+
+.footer-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play-bar-left {
+    display: flex;
+    align-items: center;
+}
+
+.play-bar-left::after {
+    content: '\f004';
+    display: inline-block;
+    font-family: "font awesome 5 free";
+    font-weight: 100; /*se metto bold viene 'piena'*/
+    font-size: 20px;
+    margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.play-bar-left-img {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.play-bar-left-img > img {
+    width: 100%;
+}
+
+.play-bar-left-text > small {
+    display: none;
+}
+
+/* slider scorrimento brano */
+
+.track-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 500px;
+  height: 3px;
+  background: #fff;
+  outline: none;
+  opacity: 0.7;
+  border-radius: 3px;
+  position: relative;
+}
+
+.track-slider:hover {
+  opacity: 1;
+}
+
+/*  Per Chrome, Opera, Safari, Edge*/
+.track-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #faeda5;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* per firefox */
+.track-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #faeda5;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.track-slider::before {
+    content: '2.52';
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    left: -35px;
+}
+
+.track-slider::after {
+    content: '1.08';
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    right: -35px;
+}
+
+/* slider scorrimento volume */
+
+
+
 
 
 
@@ -373,6 +467,13 @@ footer {
         margin: auto;
     }
 
+    /* _____inizio footer_____ */
+
+    .play-bar-left-img {
+        width: 80px;
+        height: 80px;
+    }
+
 }
 
 /* _____media messa per fluidità card____ */
@@ -430,6 +531,14 @@ footer {
     .main-p-title > p {
         text-align: left;
         margin: 0 0 50px 20px;
+    }
+
+    /* _______inizio foooter_______ */
+
+    .play-bar-left-text > small {
+        display: block;
+        margin: 10px 20px;
+        color: #fff;
     }
 }
 
