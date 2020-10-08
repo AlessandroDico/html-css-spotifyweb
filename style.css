@@ -469,8 +469,8 @@ footer {
     }
 
     .img-artists {
-        width: 178px;
-        height: 178px;
+        width: 175px;
+        height: 175px;
     }
 
     .container-main-images {
@@ -621,7 +621,7 @@ footer {
 @media screen and (min-width: 870px) {
 
     .container-main {
-        width: 660px;
+        width: 653px;
         margin: auto;
     }
 
@@ -697,7 +697,7 @@ footer {
 @media screen and (min-width: 1080px) {
 
     .container-main {
-        width: 880px;
+        width: 863px;
         margin: auto;
     }
 }
@@ -706,7 +706,7 @@ footer {
 @media screen and (min-width: 1300px) {
 
     .container-main {
-        width: 1110px;
+        width: 1080px;
         margin: auto;
     }
 
