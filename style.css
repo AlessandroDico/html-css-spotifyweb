@@ -45,6 +45,9 @@ aside.aside-menu, main {
 aside.aside-menu {
     background-color: #121212;
     width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .logo > img.logo-desktop {
@@ -60,16 +63,16 @@ aside.aside-menu {
 
 /* ____inizio lista menu aside________ */
 
-.menu-aside >ul > li {
+.ul-menu-aside >ul > li {
     padding: 10px 0;
     text-align: center;
 }
 
-.menu-aside >ul > li > a {
+.ul-menu-aside >ul > li > a {
     display: none;
 }
 
-li#search-icon::before {
+a#search-icon::before {
     content: '\f002';
     font-family: "font awesome 5 free";
     font-weight: bold;
@@ -80,7 +83,7 @@ li#search-icon::before {
     cursor: pointer;
 }
 
-li#home-icon::before {
+a#home-icon::before {
     content: '\f015';
     font-family: "font awesome 5 free";
     font-weight: bold;
@@ -90,7 +93,7 @@ li#home-icon::before {
     cursor: pointer;
 }
 
-li#library-icon::before {
+a#library-icon::before {
     content: '\f518';
     font-family: "font awesome 5 free";
     font-weight: bold;
@@ -109,12 +112,9 @@ li#library-icon::before {
 /* ____inizio aside menu bottom___ */
 
 .aside-menu-bottom {
-    position: absolute;
-    bottom: 2%;
-    left: 50%;
-    transform: translatex(-50%);
     width: 80%;
     text-align: center;
+    margin: 0 auto 10px auto;
 }
 
 .aside-menu-bottom span {
@@ -178,7 +178,7 @@ main {
 }
 
 .container-main {
-    width: 95%;
+    width: 100%;
     margin: auto;
     padding: 20px 0;
 }
@@ -203,12 +203,13 @@ main {
 }
 
 .img-artists {
-    width: 105px;
-    height: 105px;
+    width: 85px;
+    height: 85px;
 }
 
 .img-artists > img {
     width: 100%;
+    cursor: pointer;
 }
 
 .img-radius > img {
@@ -239,6 +240,9 @@ footer {
     bottom: 0;
 }
 
+
+
+
 /* @@@@@@@@@@________inizio media______ @@@@@@@@@@ */
 
 @media screen and (min-width: 768px) {
@@ -260,29 +264,35 @@ footer {
 
     /* ____inizio lista menu aside________ */
 
-    .menu-aside >ul > li {
+    .ul-menu-aside >ul > li {
         padding: 10px 0;
         text-align: left;
     }
 
-    .menu-aside >ul > li > a {
+    .ul-menu-aside >ul > li > a {
         display: inline-block;
         font-size: 18px;
         color: #e5f6dbc9;
+        border: 2px solid transparent;
     }
 
-    li#search-icon::before {
+    .ul-menu-aside >ul > li > a:hover {
+        border-left: 2px solid gold;
+        color: #fff;
+    }
+
+    a#search-icon::before {
         display: inline-block;
         padding: 0 15px;
         margin-top: 0;
     }
 
-    li#home-icon::before {
+    a#home-icon::before {
         display: inline-block;
         padding: 0 15px;
     }
 
-    li#library-icon::before {
+    a#library-icon::before {
         display: inline-block;
         padding: 0 15px;
     }
@@ -296,10 +306,16 @@ footer {
     }
 
     .sottomenu-aside > ul > li > a {
-        display: block;
+        display: inline-block;
         color: #e5f6dbc9;
         font-size: 14px;
-        margin: 10px 0;
+        margin: 5px 0;
+        border: 1px solid transparent;
+    }
+
+    .sottomenu-aside > ul > li > a:hover {
+        color: #fff;
+        border-bottom: 1px solid gold;
     }
 
     /* _____inizio menu aside bottom_____ */
@@ -313,6 +329,7 @@ footer {
         display: inline-block;
         color: #e5f6dbc9;
         margin-left: 20px;
+        cursor: pointer;
     }
 
     .app-install-link > span {
@@ -343,9 +360,30 @@ footer {
     }
 
     .img-artists {
-        width: 170px;
-        height: 170px;
+        width: 178px;
+        height: 178px;
     }
+
+    .container-main-images {
+        justify-content: flex-start;
+    }
+
+    .container-main {
+        width: 440px;
+        margin: auto;
+    }
+
+}
+
+/* _____media messa per fluidità card____ */
+
+@media screen and (min-width: 870px) {
+
+    .container-main {
+        width: 660px;
+        margin: auto;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -363,8 +401,7 @@ footer {
     /* _______inizio menu sezione main_______ */
 
     .container-main {
-        width: 82%;
-        padding: 60px 0;
+        padding: 50px 0 30px 0;
     }
 
     .main-desktop-menu {
@@ -379,23 +416,41 @@ footer {
     .main-desktop-menu > ul > li > a {
         display: inline-block;
         padding: 5px;
-        margin: 0 15px;
+        margin: 0 13px;
         color: #e2e5cbe6;
         font-size: 15px;
+        border: 2px solid transparent;
+    }
+
+    .main-desktop-menu > ul > li > a:hover {
+        color: #fff;
+        border-bottom: 2px solid gold;
     }
 
     .main-p-title > p {
         text-align: left;
         margin: 0 0 50px 20px;
     }
+}
 
-    .container-main-images  {
-        justify-content: flex-start;
+/* _____media messa per fluidità card____ */
+@media screen and (min-width: 1080px) {
+
+    .container-main {
+        width: 880px;
+        margin: auto;
+    }
+}
+
+/* _____media messa per fluidità card____ */
+@media screen and (min-width: 1300px) {
+
+    .container-main {
+        width: 1110px;
+        margin: auto;
     }
 
 }
-
-
 
 
 
