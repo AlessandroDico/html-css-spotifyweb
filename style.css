@@ -239,7 +239,7 @@ footer {
 .footer-container {
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -249,14 +249,7 @@ footer {
 }
 
 .play-bar-left::after {
-    content: '\f004';
-    display: inline-block;
-    font-family: "font awesome 5 free";
-    font-weight: 100; /*se metto bold viene 'piena'*/
-    font-size: 20px;
-    margin-left: 10px;
-    color: #fff;
-    cursor: pointer;
+    display: none;
 }
 
 .play-bar-left-img {
@@ -275,16 +268,22 @@ footer {
 
 /* slider scorrimento brano */
 
+.slider-track-container {
+    display: inline-block;
+}
+
+
 .track-slider {
   -webkit-appearance: none;
   appearance: none;
-  width: 400px;
+  width: 50vw;
   height: 3px;
   background: #fff;
   outline: none;
   opacity: 0.7;
   border-radius: 3px;
   position: relative;
+  margin-left: 15px;
 }
 
 .track-slider:hover {
@@ -312,33 +311,27 @@ footer {
 }
 
 .track-slider::before {
-    content: '2.52';
-    font-size: 12px;
-    color: #fff;
-    position: absolute;
-    top: -5px;
-    left: -35px;
+    display: none;
 }
 
 .track-slider::after {
-    content: '1.08';
-    font-size: 12px;
-    color: #fff;
-    position: absolute;
-    top: -5px;
-    right: -35px;
+    display: none;
 }
 
 /* track icons */
 
 .track-slider-icons {
-    text-align: center;
+    display: none;
 }
 
-.track-slider-icons > i {
+.mobile-icon-track-slider {
+    display: inline-block;
+}
+
+.mobile-icon-track-slider > i {
     color: #fff;
     font-size: 25px;
-    margin: 0 15px 13px 15px;
+    margin-left: 15px;
     cursor: pointer;
 }
 
@@ -353,6 +346,13 @@ footer {
 
 
 /* @@@@@@@@@@________inizio media______ @@@@@@@@@@ */
+
+@media screen and (min-width: 420px) {
+    /* media messa per centrare meglio la track bar */
+    .track-slider {
+      margin-left: 80px;
+    }
+}
 
 @media screen and (min-width: 768px) {
 
@@ -484,14 +484,54 @@ footer {
 
     /* _____inizio footer_____ */
 
+    .footer-container {
+        justify-content: space-between;
+    }
+
     .play-bar-left-img {
         width: 80px;
         height: 80px;
     }
 
+    .play-bar-left::after {
+        content: '\f004';
+        display: inline-block;
+        font-family: "font awesome 5 free";
+        font-weight: 100; /*se metto bold viene 'piena'*/
+        font-size: 20px;
+        margin-left: 10px;
+        color: #fff;
+        cursor: pointer;
+    }
+
     /* _________track slider__________ */
     .track-slider {
       width: 280px;
+      margin-left: 0;
+    }
+
+    .mobile-icon-track-slider > i {
+        display: none;
+    }
+
+    .track-slider::before {
+        display: block;
+        content: '2.52';
+        font-size: 12px;
+        color: #fff;
+        position: absolute;
+        top: -5px;
+        left: -35px;
+    }
+
+    .track-slider::after {
+        display: block;
+        content: '1.08';
+        font-size: 12px;
+        color: #fff;
+        position: absolute;
+        top: -5px;
+        right: -35px;
     }
 
     /*___________ volume slider______ */
@@ -558,6 +598,20 @@ footer {
         position: absolute;
         top: -5px;
         right: -30px;
+    }
+
+    /* _____track icons_____ */
+
+    .track-slider-icons {
+        text-align: center;
+        display: block;
+    }
+
+    .track-slider-icons > i {
+        color: #fff;
+        font-size: 25px;
+        margin: 0 15px 13px 15px;
+        cursor: pointer;
     }
 
 }
