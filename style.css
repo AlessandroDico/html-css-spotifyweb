@@ -278,7 +278,7 @@ footer {
 .track-slider {
   -webkit-appearance: none;
   appearance: none;
-  width: 500px;
+  width: 400px;
   height: 3px;
   background: #fff;
   outline: none;
@@ -329,9 +329,24 @@ footer {
     right: -35px;
 }
 
+/* track icons */
+
+.track-slider-icons {
+    text-align: center;
+}
+
+.track-slider-icons > i {
+    color: #fff;
+    font-size: 25px;
+    margin: 0 15px 13px 15px;
+    cursor: pointer;
+}
+
 /* slider scorrimento volume */
 
-
+.play-bar-right {
+    display: none;
+}
 
 
 
@@ -474,6 +489,77 @@ footer {
         height: 80px;
     }
 
+    /* _________track slider__________ */
+    .track-slider {
+      width: 280px;
+    }
+
+    /*___________ volume slider______ */
+
+    .play-bar-right {
+        display: flex;
+        margin-right: 40px;
+    }
+
+    .volume-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 80px;
+      height: 3px;
+      background: #fff;
+      outline: none;
+      opacity: 0.7;
+      border-radius: 3px;
+      position: relative;
+    }
+
+    .volume-slider:hover {
+      opacity: 1;
+    }
+
+    /*  Per Chrome, Opera, Safari, Edge*/
+    .volume-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #faeda5;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    /* per firefox */
+    .volume-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: #faeda5;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+
+    .volume-slider::before {
+        content: '\f026';
+        font-family: "font awesome 5 free";
+        font-weight: bold;
+        font-size: 15px;
+        color: #fff;
+        position: absolute;
+        top: -5px;
+        left: -30px;
+    }
+
+    .volume-slider::after {
+        content: '\f028';
+        font-family: "font awesome 5 free";
+        font-weight: bold;
+        font-size: 15px;
+        color: #fff;
+        position: absolute;
+        top: -5px;
+        right: -30px;
+    }
+
 }
 
 /* _____media messa per fluidità card____ */
@@ -540,6 +626,17 @@ footer {
         margin: 10px 20px;
         color: #fff;
     }
+
+    /* ______track slider______ */
+
+    .track-slider {
+      width: 400px;
+    }
+
+    .volume-slider {
+      width: 100px;
+    }
+
 }
 
 /* _____media messa per fluidità card____ */
