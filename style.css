@@ -342,13 +342,10 @@ footer {
 }
 
 
-
-
-
 /* @@@@@@@@@@________inizio media______ @@@@@@@@@@ */
 
 @media screen and (min-width: 420px) {
-    /* media messa per centrare meglio la track bar */
+    /* media messa per centrare meglio la track bar tra 420px e 768px */
     .track-slider {
       margin-left: 80px;
     }
@@ -534,6 +531,20 @@ footer {
         right: -35px;
     }
 
+    /* _____track icons_____ */
+
+    .track-slider-icons {
+        text-align: center;
+        display: block;
+    }
+
+    .track-slider-icons > i {
+        color: #fff;
+        font-size: 25px;
+        margin: 0 15px 13px 15px;
+        cursor: pointer;
+    }
+
     /*___________ volume slider______ */
 
     .play-bar-right {
@@ -600,19 +611,6 @@ footer {
         right: -30px;
     }
 
-    /* _____track icons_____ */
-
-    .track-slider-icons {
-        text-align: center;
-        display: block;
-    }
-
-    .track-slider-icons > i {
-        color: #fff;
-        font-size: 25px;
-        margin: 0 15px 13px 15px;
-        cursor: pointer;
-    }
 
 }
 
