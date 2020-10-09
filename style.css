@@ -69,38 +69,21 @@ aside.aside-menu {
 }
 
 .ul-menu-aside >ul > li > a {
+    color: #e5f6dbc9;
+}
+
+.ul-menu-aside >ul > li > a span {
     display: none;
 }
 
-a#search-icon::before {
-    content: '\f002';
-    font-family: "font awesome 5 free";
-    font-weight: bold;
-    display: block;
+.ul-menu-aside >ul > li > a > i {
     font-size: 20px;
-    color: #e5f6dbc9;
     margin-top: 30px;
     cursor: pointer;
 }
 
-a#home-icon::before {
-    content: '\f015';
-    font-family: "font awesome 5 free";
-    font-weight: bold;
-    display: block;
-    font-size: 20px;
-    color: #e5f6dbc9;
-    cursor: pointer;
-}
-
-a#library-icon::before {
-    content: '\f518';
-    font-family: "font awesome 5 free";
-    font-weight: bold;
-    display: block;
-    font-size: 20px;
-    color: #e5f6dbc9;
-    cursor: pointer;
+.ul-menu-aside >ul > li > a > i:hover {
+    color: #fff;
 }
 
 /* ____inizio lista sottomenu aside________ */
@@ -171,6 +154,7 @@ main {
     position: absolute;
     left: 15px;
     top: 10px;
+    cursor: pointer;
 }
 
 .main-desktop-menu {
@@ -371,15 +355,18 @@ footer {
     /* ____inizio lista menu aside________ */
 
     .ul-menu-aside >ul > li {
-        padding: 10px 0;
+        padding: 10px 20px;
         text-align: left;
     }
 
     .ul-menu-aside >ul > li > a {
+        padding: 5px;
+        border: 2px solid transparent;
+    }
+
+    .ul-menu-aside >ul > li > a span {
         display: inline-block;
         font-size: 18px;
-        color: #e5f6dbc9;
-        border: 2px solid transparent;
     }
 
     .ul-menu-aside >ul > li > a:hover {
@@ -387,20 +374,9 @@ footer {
         color: #fff;
     }
 
-    a#search-icon::before {
-        display: inline-block;
-        padding: 0 15px;
+    .ul-menu-aside >ul > li > a > i {
         margin-top: 0;
-    }
-
-    a#home-icon::before {
-        display: inline-block;
-        padding: 0 15px;
-    }
-
-    a#library-icon::before {
-        display: inline-block;
-        padding: 0 15px;
+        margin-right: 10px;
     }
 
     /* ____inizio lista sottomenu aside________ */
