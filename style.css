@@ -233,6 +233,19 @@ footer {
     position: relative;;
 }
 
+.play-bar-left::after {
+    content: '\f004';
+    display: inline-block;
+    font-family: "font awesome 5 free";
+    font-weight: 100; /*se metto bold viene 'piena'*/
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 75px;
+}
+
 .play-bar-left-img {
     width: 60px;
     height: 60px;
@@ -245,19 +258,6 @@ footer {
 
 .play-bar-left-text > small {
     display: none;
-}
-
-.play-bar-left::after {
-    content: '\f004';
-    display: inline-block;
-    font-family: "font awesome 5 free";
-    font-weight: 100; /*se metto bold viene 'piena'*/
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-    position: absolute;
-    top: 0px;
-    left: 75px;
 }
 
 /* slider scorrimento brano */
@@ -329,10 +329,6 @@ footer {
     position: absolute;
     top: -5px;
     right: -35px;
-}
-
-.track-slider-icons {
-    display: block;
 }
 
 .track-slider-icons > i {
