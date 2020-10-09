@@ -230,16 +230,13 @@ footer {
 .play-bar-left {
     display: flex;
     align-items: center;
-}
-
-.play-bar-left::after {
-    display: none;
+    position: relative;;
 }
 
 .play-bar-left-img {
     width: 60px;
     height: 60px;
-    margin-left: 20px;
+    margin-left: 5px;
 }
 
 .play-bar-left-img > img {
@@ -250,24 +247,44 @@ footer {
     display: none;
 }
 
-/* slider scorrimento brano */
-
-.slider-track-container {
+.play-bar-left::after {
+    content: '\f004';
     display: inline-block;
+    font-family: "font awesome 5 free";
+    font-weight: 100; /*se metto bold viene 'piena'*/
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 75px;
 }
 
+/* slider scorrimento brano */
+
+.play-bar-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+.slider-track-container {
+    width: 100%;
+}
 
 .track-slider {
   -webkit-appearance: none;
   appearance: none;
-  width: 50vw;
+  width: 100%;
   height: 3px;
   background: #fff;
   outline: none;
   opacity: 0.7;
   border-radius: 3px;
   position: relative;
-  margin-left: 15px;
 }
 
 .track-slider:hover {
@@ -295,27 +312,33 @@ footer {
 }
 
 .track-slider::before {
-    display: none;
+    display: block;
+    content: '2.52';
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    left: -35px;
 }
 
 .track-slider::after {
-    display: none;
+    display: block;
+    content: '1.08';
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    right: -35px;
 }
-
-/* track icons */
 
 .track-slider-icons {
-    display: none;
+    display: block;
 }
 
-.mobile-icon-track-slider {
-    display: inline-block;
-}
-
-.mobile-icon-track-slider > i {
+.track-slider-icons > i {
     color: #fff;
-    font-size: 25px;
-    margin-left: 15px;
+    font-size: 15px;
+    margin: 0 7px 13px 7px;
     cursor: pointer;
 }
 
@@ -326,14 +349,13 @@ footer {
 }
 
 
-/* @@@@@@@@@@________inizio media______ @@@@@@@@@@ */
 
-@media screen and (min-width: 420px) {
-    /* media messa per centrare meglio la track bar tra 420px e 768px */
-    .track-slider {
-      margin-left: 80px;
-    }
-}
+
+
+
+
+
+/* @@@@@@@@@@________inizio media______ @@@@@@@@@@ */
 
 @media screen and (min-width: 768px) {
 
@@ -464,61 +486,24 @@ footer {
     .play-bar-left-img {
         width: 80px;
         height: 80px;
+        margin-left: 20px;
     }
 
     .play-bar-left::after {
-        content: '\f004';
-        display: inline-block;
-        font-family: "font awesome 5 free";
-        font-weight: 100; /*se metto bold viene 'piena'*/
-        font-size: 20px;
+        position: static;
         margin-left: 10px;
-        color: #fff;
-        cursor: pointer;
     }
 
     /* _________track slider__________ */
-    .track-slider {
-      width: 280px;
-      margin-left: 0;
-    }
 
-    .mobile-icon-track-slider > i {
-        display: none;
-    }
-
-    .track-slider::before {
-        display: block;
-        content: '2.52';
-        font-size: 12px;
-        color: #fff;
-        position: absolute;
-        top: -5px;
-        left: -35px;
-    }
-
-    .track-slider::after {
-        display: block;
-        content: '1.08';
-        font-size: 12px;
-        color: #fff;
-        position: absolute;
-        top: -5px;
-        right: -35px;
-    }
-
-    /* _____track icons_____ */
-
-    .track-slider-icons {
-        text-align: center;
-        display: block;
+    .play-bar-center {
+        margin-left: 60px;
+        margin-right: 100px;
     }
 
     .track-slider-icons > i {
-        color: #fff;
         font-size: 25px;
         margin: 0 15px 13px 15px;
-        cursor: pointer;
     }
 
     /*___________ volume slider______ */
@@ -587,8 +572,9 @@ footer {
         right: -30px;
     }
 
-
 }
+
+
 
 /* _____media messa per fluidità card____ */
 
@@ -598,8 +584,8 @@ footer {
         width: 653px;
         margin: auto;
     }
-
 }
+
 
 @media screen and (min-width: 992px) {
 
@@ -658,14 +644,15 @@ footer {
     /* ______track slider______ */
 
     .track-slider {
-      width: 400px;
+      /* width: 400px; */
+      /* width: 100%; */
     }
 
     .volume-slider {
       width: 100px;
     }
-
 }
+
 
 /* _____media messa per fluidità card____ */
 @media screen and (min-width: 1080px) {
@@ -676,6 +663,7 @@ footer {
     }
 }
 
+
 /* _____media messa per fluidità card____ */
 @media screen and (min-width: 1300px) {
 
@@ -683,7 +671,6 @@ footer {
         width: 1080px;
         margin: auto;
     }
-
 }
 
 
